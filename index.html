@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <p class="eyebrow">Arcade Mini</p>
+        <h1>Snake</h1>
+        <p class="subtitle">
+          Use arrow keys or WASD. Eat fruit, grow longer, avoid walls and your own tail.
+        </p>
+
+        <div class="stats">
+          <div class="stat-card">
+            <span class="stat-label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Best</span>
+            <strong id="best-score">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Skin</span>
+            <strong id="skin-name">Baby Blob</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="restart-btn" class="primary-button" type="button">Restart</button>
+          <p id="status" class="status">Press any direction to start.</p>
+        </div>
+      </section>
+
+      <section class="game-shell">
+        <canvas
+          id="game"
+          width="400"
+          height="400"
+          aria-label="Snake game board"
+        ></canvas>
+
+        <div class="controls" aria-label="Touch controls">
+          <button class="control-button" data-direction="up" type="button">&uarr;</button>
+          <div class="control-row">
+            <button class="control-button" data-direction="left" type="button">&larr;</button>
+            <button class="control-button" data-direction="down" type="button">&darr;</button>
+            <button class="control-button" data-direction="right" type="button">&rarr;</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
